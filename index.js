@@ -58,9 +58,9 @@ fetch("lyrics.xml").then((resp) => {
           charList.push(chartLyric);
         }
 
-        lyricsParam.time = lyricsXmlParam.children[i]
+        lyricsParam.time = Number(lyricsXmlParam.children[i]
           .getElementsByTagName("i")[0]
-          .getAttribute("va");
+          .getAttribute("va"))-0.8;
         lyricsParam.lyricsData = lyricsChart;
         lyricsList.push(lyricsParam);
       }
@@ -133,8 +133,8 @@ const getLyrics = (currTime) => {
   for (let i = 0; i < lyricsList.length; i++) {
     if (i < Number(lyricsList.length - 1)) {
         if (
-        Number(lyricsList[i].time) < currTime &&
-        Number(lyricsList[i + 1].time) > currTime
+        Number(lyricsList[i].time) < +currTime &&
+        Number(lyricsList[i + 1].time) > +currTime
         ) {
         return lyricsList[i].lyricsData;
         }
@@ -316,7 +316,7 @@ audio.addEventListener("play", () => {
       clearInterval(IntervalRender);
       clearInterval(handleCheckColor);
     }
-  }, 1050);
+  }, 600);
 });
 
 slider.addEventListener("change", () => {
