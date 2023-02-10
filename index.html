@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="music-name">Về đâu mái tóc người thương</div>
+        <div class="spin-picture">
+            <img src="photo-1673981171866-22a94714457b.jpg" alt="">
+        </div>
+        <div class="audio" hidden>
+            <audio controls id="audio">
+                <source type="audio/ogg" src="https://storage.googleapis.com/ikara-storage/tmp/beat.mp3">
+            </audio>
+        </div>
+        <div id="lyrics">. . .
+        </div>
+        <div id="sublyrics">
+        </div>
+        <div class="music">
+            <div id="music-range">
+                <input type="range" id="slider" min="0" name="slider" value="0">
+                <div class="timer">
+                    <div id="currentTime"></div>
+                    <div id="duration"></div>
+                </div>
+            </div>
+            <div class="music-control">
+                <i class="fa-solid fa-backward"></i>
+                <label id="player">
+                    <i class="fa-solid fa-play player" ></i>
+                </label>
+                <label id="stopper" hidden>
+                    <i class="fa-solid fa-stop" ></i>
+                </label>
+                <i class="fa-solid fa-forward"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/dccec83b30.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

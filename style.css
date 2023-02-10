@@ -1,0 +1,151 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    margin: auto;
+    width: 450px;
+    height: 700px;
+    background: rgb(137, 142, 193);
+}
+.music-name{
+    font-size: large;
+    font-weight: 650;
+    padding: 40px 50px;
+}
+.spin-picture > img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+    margin: 50px 125px;
+    animation: spinner 5000ms linear infinite;
+}
+#music-range{
+    width: 90%;
+    padding: 5% 20px;
+}
+
+.music {
+    margin-top: 20px;
+}
+
+.music-control{
+    text-align: center;
+}
+.music-control *{
+    margin: 20px;
+    font-size: larger;
+    cursor: pointer;
+}
+.d-none {
+    display: none;
+}
+.d.block {
+    display: block;
+}
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#lyrics {
+    color: white;
+    font-size: 18px;
+    margin: 40px 0px 15px 5px;
+    animation: infinite;
+    animation-name: liveLyrics;
+    animation-duration: 4s;
+    text-align: center;
+}
+
+#lyrics > i {
+    font-size: 16px;
+    text-shadow: #000;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;  
+}
+
+
+
+#sublyrics {
+    color: white;
+    font-size: 15px;
+    margin: 0px 0px 0px 5px;
+    text-align: center;
+}
+
+/* #stopper {
+    display: none;
+} */
+
+#slider {
+    -webkit-appearance: none !important;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+#slider ::-webkit-slider-thumb{
+    display: none;
+}
+.linear-wipe {
+    text-align: center;
+    
+    background: linear-gradient(to right, #FFF ,wh);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 3s linear infinite;
+
+  }
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes run-text {
+    from { width: 0 }
+    to { width: 100% }
+  }
+@keyframes liveLyrics {
+    from {
+        right: 10px;
+    }to {
+        right: 100px;
+    }
+}
+
+@keyframes stripes {
+    to {
+      background-size:100% 100%;
+    }
+  }
+  
+
+@keyframes showLyrics {
+    from {
+        display: block;
+    }to {
+        display: none;
+    }
+}
+
+@keyframes spinner {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
