@@ -186,7 +186,7 @@ const getChar = (currTime) => {
 let handleCheckColor = setInterval(() => {
   let element = document.getElementById(`${audio.currentTime.toFixed(2)}lyricsTag`);
   element ? element.style.color = "red": "";
-}, 3);
+}, 1.5);
 
 const renderLyrics = (lyrics, nextTime, tagName) => {
   let showLyrics = ``;
@@ -316,7 +316,7 @@ audio.addEventListener("play", () => {
       clearInterval(IntervalRender);
       clearInterval(handleCheckColor);
     }
-  }, 600);
+  }, 700);
 });
 
 slider.addEventListener("change", () => {
