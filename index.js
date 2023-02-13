@@ -316,7 +316,7 @@ audio.addEventListener("play", () => {
       clearInterval(IntervalRender);
       clearInterval(handleCheckColor);
     }
-  }, 700);
+  }, 600);
 });
 
 slider.addEventListener("change", () => {
